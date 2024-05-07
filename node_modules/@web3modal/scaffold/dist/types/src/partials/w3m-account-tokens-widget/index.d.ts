@@ -1,0 +1,18 @@
+import { LitElement } from 'lit';
+export declare class W3mAccountTokensWidget extends LitElement {
+    static styles: import("lit").CSSResult;
+    private unsubscribe;
+    private tokenBalance;
+    constructor();
+    disconnectedCallback(): void;
+    render(): import("lit-html").TemplateResult<1>;
+    private tokenTemplate;
+    private tokenItemTemplate;
+    private onReceiveClick;
+    private onBuyClick;
+}
+declare global {
+    interface HTMLElementTagNameMap {
+        'w3m-account-tokens-widget': W3mAccountTokensWidget;
+    }
+}
