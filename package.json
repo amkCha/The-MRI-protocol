@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@tanstack/react-query": "^5.35.1",
-    "@verax-attestation-registry/verax-sdk": "^1.6.0",
-    "@web3modal/wagmi": "^4.1.11",
-    "viem": "^2.10.1",
-    "wagmi": "^2.8.1"
-  }
-}
