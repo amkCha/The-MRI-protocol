@@ -3,7 +3,7 @@ A generalizable protocol for reporting and incentivizing aspects of node diversi
 
 For the hackathon, we developed a simple and efficient protocol tackling the current lack of Client diversity on Ethereum. 
 
-The proposed Minority Report Incentive protocol is the following: 
+## The proposed Minority Report Incentive protocol
 
 Clients release an opt-out Graffiti usage to tag client information on chain
 
@@ -15,7 +15,7 @@ Via transaction bundling and MEV capture techniques, 1% tithing / donations can 
 
 Every quarter, client developments teams can request funds from the smart contract that will use Verax to attest the validity of the request 
 
-In this repo
+**In this repo**
 
 ## protocol-diagrams
 
