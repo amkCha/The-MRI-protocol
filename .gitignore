@@ -1,0 +1,16 @@
+# Dotenv file
+.env
+
+# Modules
+node_modules
+
+# IDE
+.idea
+.vscode
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
