@@ -42,3 +42,15 @@ To issue Proof of minority attestations on Verax
 ## smart-contracts
 
 MRI contract to collect and release funds
+
+## linea-attestation-registry-mock
+
+Mock of linea's attestation registry explorer https://github.com/Consensys/linea-attestation-registry/tree/dev/explorer
+
+Include the MRI protocol as issuer
+
+`yarn install`
+
+`npm run dev`
+
+Go to `http://localhost:5173/linea`
