@@ -19,7 +19,7 @@ function App() {
   const sdkConf = chainId === 59144 ? VeraxSdk.DEFAULT_LINEA_MAINNET_FRONTEND : VeraxSdk.DEFAULT_LINEA_TESTNET_FRONTEND;
   const veraxSdk = new VeraxSdk(sdkConf, address);
 
-  const SCHEMA = '(string client, uint16 numberValidators, bool isMinority)';
+  const SCHEMA = '(string client, uint256 numberValidators, uint16 rank, bool isMinority)';
   const [count, setCount] = useState(0)
 
   const createSchema = async () => {
@@ -41,22 +41,22 @@ function App() {
 
 const getSchemaId = async () => { 
   const receipt = await waitForTransactionReceipt(config.getClient(), {
-    hash: "0x87f7938bfbea968d45dd1a23332335c67b2ff70f3b70a10a880919037f1014e6",
+    hash: "0x112912512f051ac5f560121185f26daedf0be29b0a6c72549bf0ab70402ac72c",
   });
   const schemaId = receipt.logs[0].topics[1];
   console.log(schemaId)
 }
 
-const schemaId = '0xeae119334efc0d38d562c53f2347b4f9c33f4b3addf6d1d9f02274be8ef31399';
+const schemaId = '0xa1a90844685924ce85a895b8e037aa6c21206fbd183a2a416b560370d3fba357';
 
 const createPortal = async () => {
       try {
           let txHash = await veraxSdk.portal.deployDefaultPortal(
             [],
-            "Tutorial Portal",
-            "This Portal is used for the tutorial",
+            "MRI Portal",
+            "This Portal is used for the MRI protocol",
             true,
-            "Verax Tutorial",
+            "The MRI protocol",
         );
         console.log(txHash)
       } catch (e) {
@@ -69,7 +69,7 @@ const createPortal = async () => {
 
 const getPortalId= async () => { 
   const receipt = await waitForTransactionReceipt(config.getClient(), {
-    hash: "0x0240a5fff2064a35251dd66ba5b4eb0ce6031cb9d1f8442a2231614380c29f09",
+    hash: "0xbe4f6eca09e898e1a2b3d653fd69128e0d49242f45fe9ae1fee5d5f19aeb4821",
   });
   const decodedLogs = decodeEventLog({
     abi: parseAbi(["event PortalRegistered(string name, string description, address portalAddress)"]),
@@ -80,7 +80,7 @@ const getPortalId= async () => {
   console.log(portalId)
 }
 
-const portalId = "0xD0c295322D1bcfF4D0532D5e671584f127edCF03";
+const portalId = "0xBb444aDa8e3FE3457F70f33dEd66e0d9B9103C3A";
 
 const attestClient = async () => {
       try {
@@ -90,7 +90,7 @@ const attestClient = async () => {
                 schemaId,
                 expirationDate: Math.floor(Date.now() / 1000) + 2592000,
                 subject: me,
-                attestationData: [{client: "besu", numberValidators: 10, isMinority: true}],
+                attestationData: [{client: "besu", numberValidators: 100000, rank: 3, isMinority: true}],
             },
             [],
         );
@@ -106,7 +106,7 @@ const attestClient = async () => {
 const getAttestationId = async () => {
   try {
     const receipt = await waitForTransactionReceipt(config.getClient(), {
-      hash: "0xaa010066d96573be845be0f2b1c37068d4bbac1361b9175a8a50e9aed846b513",
+      hash: "0xf411a7e6b601ea92734d881dd72f25f5d4c348998f121237ae1bbbc0b0d70bce",
     });
    const attestationId = receipt.logs?.[0].topics[1];
    console.log(attestationId)
@@ -118,7 +118,7 @@ const getAttestationId = async () => {
   }
 };
 
-const attestationId ="0x0000000000000000000000000000000000000000000000000000000000001881"
+const attestationId ="0x000000000000000000000000000000000000000000000000000000000000188f"
 
 const getAttestation = async () => {
   try {
