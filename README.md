@@ -34,6 +34,14 @@ https://ethresear.ch/t/research-report-allowing-validators-to-share-client-infor
 
 Please open a PR to discuss any of the above, would be happy to have more insights and improve the FAQ section !
 
+## Graffiti's usage since Teku's release
+
+Out of the 60% of Graffitis that are used
+
+| |Week 1| Week 2 | Week 3 |
+|-----|--------|--------|--------|
+|Teku tag| 5% | 12% | 16% |
+
 ## Structure of the repo
 
 ### protocol-diagrams
