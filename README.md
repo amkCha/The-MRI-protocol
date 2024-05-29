@@ -44,13 +44,14 @@ The MRI protocol is stays in the Ethereum L1 realm, with funds in Eth, but is no
 
 Happy to discuss any of the above in a PR, have more insights for the protocol and improve the FAQ section !
 
-## Graffiti's usage since Teku's release
+## Graffiti's usage since Teku's 24.4.0 release
 
-Out of the 60% of Graffitis that are used
+Teku 24.4.0 was released on Week 17. 
+Since its release, out of the 60% of Graffitis that are used
 
-| |Week 1| Week 2 | Week 3 |
-|-----|--------|--------|--------|
-|Teku tag| 5% | 12% | 16% |
+|        | Week 18 | Week 19 | Week 20 | Week 21 |
+|--------|---------|---------|---------|---------|
+|Teku tag| 5%      |    12%  |     15% |     16% |
 
 ## Structure of the repo
 
